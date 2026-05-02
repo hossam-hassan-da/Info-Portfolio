@@ -264,6 +264,172 @@ export default function Home() {
                   </div>
                 </DialogContent>
               </Dialog>
+
+
+              {/* Project 2 */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Card className="overflow-hidden border-border/50 hover:border-primary/50 transition-all cursor-pointer group bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-[0_0_30px_rgba(0,212,255,0.1)] mt-6">
+                    <div className="md:flex h-full">
+                      <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
+                        <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity"></div>
+                        <img
+                          src="/retail_dashboard.png"
+                          alt="Retail Sales Dashboard Preview"
+                          className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-700"
+                        />
+                      </div>
+                      <div className="md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">Power BI</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">SQL</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">DAX</Badge>
+                          </div>
+                          <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Sales & Customer Analytics Report</h3>
+                          <p className="text-muted-foreground mb-6 line-clamp-3">
+                            Interactive retail dashboard analyzing $456K in sales across 1,000 transactions — uncovering customer demographics, product category trends, and temporal patterns to drive data-driven business decisions.
+                          </p>
+                        </div>
+                        <div className="flex items-center text-primary font-medium text-sm">
+                          View Detailed Case Study <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-5xl w-[90vw] max-h-[90vh] overflow-y-auto bg-card border-border/50 p-0 hide-scrollbar rounded-xl">
+                  <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 border-b border-border bg-card/95 backdrop-blur">
+                    <DialogTitle className="text-xl font-bold">Sales & Customer Analytics Report</DialogTitle>
+                  </div>
+
+                  <div className="p-6 md:p-8 space-y-12">
+                    {/* Header */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="flex-1 space-y-6">
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="outline" className="border-primary/30 text-primary">SQL (MySQL)</Badge>
+                          <Badge variant="outline" className="border-primary/30 text-primary">Power BI</Badge>
+                          <Badge variant="outline" className="border-primary/30 text-primary">DAX</Badge>
+                        </div>
+                        <h2 className="text-3xl font-extrabold">Retail Sales & Customer Analytics</h2>
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                          An interactive Power BI dashboard analyzing retail transaction data to extract actionable insights on sales performance, customer demographics, product category trends, and temporal purchasing patterns.
+                        </p>
+                        <div className="flex flex-wrap gap-4 pt-2">
+                          <Button asChild className="rounded-full shadow-[0_0_10px_rgba(0,212,255,0.3)]">
+                            <a href="https://app.powerbi.com/links/VCtMebx-DD?ctid=5bf578da-db20-4df2-b8d2-c2357607e377&pbi_source=linkShare" target="_blank" rel="noreferrer">
+                              <ExternalLink className="mr-2 w-4 h-4" /> Interactive Dashboard
+                            </a>
+                          </Button>
+                          <Button variant="outline" asChild className="rounded-full border-border">
+                            <a href="https://github.com/hossam-hassan-da/hossam-hassan-da" target="_blank" rel="noreferrer">
+                              <Github className="mr-2 w-4 h-4" /> View Repository
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+
+                      <div className="w-full md:w-1/3 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-4">
+                        <Card className="bg-background/50 border-border/50">
+                          <CardContent className="p-5 flex flex-col items-center justify-center text-center">
+                            <span className="text-3xl font-bold text-primary mb-1">$456K</span>
+                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Total Sales</span>
+                          </CardContent>
+                        </Card>
+                        <Card className="bg-background/50 border-border/50">
+                          <CardContent className="p-5 flex flex-col items-center justify-center text-center">
+                            <span className="text-3xl font-bold text-primary mb-1">1,000</span>
+                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Transactions</span>
+                          </CardContent>
+                        </Card>
+                        <Card className="bg-background/50 border-border/50">
+                          <CardContent className="p-5 flex flex-col items-center justify-center text-center">
+                            <span className="text-3xl font-bold text-primary mb-1">$456</span>
+                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Avg. Sale Value</span>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+
+                    <Separator className="bg-border/50" />
+
+                    {/* Dashboard Visual */}
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold flex items-center gap-2">
+                        <BarChart3 className="w-6 h-6 text-primary" /> Dashboard Implementation
+                      </h3>
+                      <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                        <img src="/retail_dashboard.png" alt="Retail Sales Power BI Dashboard" className="w-full h-auto" />
+                      </div>
+                      <p className="text-sm text-muted-foreground text-center mt-2">Interactive Power BI Dashboard with gender slicer, category breakdown, temporal trends, and demographic analysis.</p>
+                    </div>
+
+                    {/* Key Findings */}
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div className="space-y-6">
+                        <h3 className="text-2xl font-bold flex items-center gap-2">
+                          <Activity className="w-6 h-6 text-primary" /> Key Findings
+                        </h3>
+                        <ul className="space-y-4">
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Category Sales:</span> Beauty leads at <span className="text-primary font-mono bg-primary/10 px-1 rounded">$157K (34.41%)</span>, followed by Clothing $156K (34.12%) and Electronics $144K (31.47%) — a balanced distribution across all three.
+                            </div>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Peak Demographics:</span> The <span className="text-primary">40-49 age group</span> drives the highest transaction volume, with 50-59 as the second-largest segment.
+                            </div>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Seasonal Trends:</span> <span className="text-primary">February</span> is the peak sales month; May, July, and December also perform strongly. September records the lowest volume.
+                            </div>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Gender Distribution:</span> Relatively balanced Male/Female purchasing patterns across all categories and days.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="space-y-6">
+                        <h3 className="text-2xl font-bold flex items-center gap-2">
+                          <Database className="w-6 h-6 text-primary" /> Data Model
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Built a Star Schema with 3 dimension tables (product, customer, date/time) feeding a central fact_sales_table for optimized analytical queries.
+                        </p>
+                        <div className="rounded-xl overflow-hidden border border-border/50 bg-background/50 p-4">
+                          <img src="/retail_schema.png" alt="Retail Star Schema" className="w-full h-auto rounded mix-blend-screen" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SQL Analysis */}
+                    <div className="space-y-6 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Terminal className="w-5 h-5 text-primary" /> SQL Analyses Performed
+                      </h3>
+                      <div className="flex flex-wrap gap-3">
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Transactions by Age Group</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Sales by Product Category</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Average Sales per Category</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Top Customer Identification</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Monthly Sales Trends</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Gender & Day-of-Week Analysis</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
             </div>
           </div>
         </section>
