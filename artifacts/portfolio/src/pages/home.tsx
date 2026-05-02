@@ -430,6 +430,195 @@ export default function Home() {
                 </DialogContent>
               </Dialog>
 
+
+
+              {/* Project 3 */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Card className="overflow-hidden border-border/50 hover:border-primary/50 transition-all cursor-pointer group bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-[0_0_30px_rgba(0,212,255,0.1)] mt-6">
+                    <div className="md:flex h-full">
+                      <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
+                        <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity"></div>
+                        <img
+                          src="/ai_dashboard_country.png"
+                          alt="AI Job Market Dashboard Preview"
+                          className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-700"
+                        />
+                      </div>
+                      <div className="md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">Power BI</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">SQL</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">DAX</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">MySQL</Badge>
+                          </div>
+                          <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">AI Job Market Trends 2026</h3>
+                          <p className="text-muted-foreground mb-6 line-clamp-3">
+                            Comprehensive analysis of 52K+ global AI job postings — benchmarking salaries at $113.44K average, mapping in-demand skills across roles, and identifying geographic hiring hotspots across 7 countries.
+                          </p>
+                        </div>
+                        <div className="flex items-center text-primary font-medium text-sm">
+                          View Detailed Case Study <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-5xl w-[90vw] max-h-[90vh] overflow-y-auto bg-card border-border/50 p-0 hide-scrollbar rounded-xl">
+                  <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 border-b border-border bg-card/95 backdrop-blur">
+                    <DialogTitle className="text-xl font-bold">AI Job Market Trends 2026</DialogTitle>
+                  </div>
+
+                  <div className="p-6 md:p-8 space-y-12">
+                    {/* Header */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="flex-1 space-y-6">
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="outline" className="border-primary/30 text-primary">MySQL</Badge>
+                          <Badge variant="outline" className="border-primary/30 text-primary">Power BI</Badge>
+                          <Badge variant="outline" className="border-primary/30 text-primary">DAX</Badge>
+                          <Badge variant="outline" className="border-primary/30 text-primary">SQL</Badge>
+                        </div>
+                        <h2 className="text-3xl font-extrabold">End-to-End AI Job Market Analysis</h2>
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                          A comprehensive analysis of 52,000+ global AI job postings — transforming raw CSV data into an interactive Power BI dashboard that benchmarks salaries, maps in-demand skills, tracks geographic opportunities, and surfaces hiring urgency trends across 7 countries (2020–2026).
+                        </p>
+                        <div className="flex flex-wrap gap-4 pt-2">
+                          <Button asChild className="rounded-full shadow-[0_0_10px_rgba(0,212,255,0.3)]">
+                            <a href="https://app.powerbi.com/links/l0JBrwZxmB?ctid=5bf578da-db20-4df2-b8d2-c2357607e377&pbi_source=linkShare" target="_blank" rel="noreferrer">
+                              <ExternalLink className="mr-2 w-4 h-4" /> Interactive Dashboard
+                            </a>
+                          </Button>
+                          <Button variant="outline" asChild className="rounded-full border-border">
+                            <a href="https://github.com/hossam-hassan-da/hossam-hassan-da" target="_blank" rel="noreferrer">
+                              <Github className="mr-2 w-4 h-4" /> View Repository
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+
+                      <div className="w-full md:w-1/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
+                        <Card className="bg-background/50 border-border/50">
+                          <CardContent className="p-5 flex flex-col items-center justify-center text-center">
+                            <span className="text-3xl font-bold text-primary mb-1">52K+</span>
+                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Job Opportunities</span>
+                          </CardContent>
+                        </Card>
+                        <Card className="bg-background/50 border-border/50">
+                          <CardContent className="p-5 flex flex-col items-center justify-center text-center">
+                            <span className="text-3xl font-bold text-primary mb-1">$113.44K</span>
+                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Avg. Salary</span>
+                          </CardContent>
+                        </Card>
+                        <Card className="bg-background/50 border-border/50">
+                          <CardContent className="p-5 flex flex-col items-center justify-center text-center">
+                            <span className="text-3xl font-bold text-primary mb-1">7</span>
+                            <span className="text-xs text-muted-foreground font-medium uppercase tracking-wider">Countries Analyzed</span>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+
+                    <Separator className="bg-border/50" />
+
+                    {/* Dashboard Visuals — two views */}
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold flex items-center gap-2">
+                        <BarChart3 className="w-6 h-6 text-primary" /> Dashboard Views
+                      </h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
+                          <img src="/ai_dashboard_country.png" alt="Country View" className="w-full h-auto" />
+                          <p className="text-xs text-muted-foreground text-center py-2 bg-card/50">Country & Industry View</p>
+                        </div>
+                        <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
+                          <img src="/ai_dashboard_jobs.png" alt="Jobs & Skills View" className="w-full h-auto" />
+                          <p className="text-xs text-muted-foreground text-center py-2 bg-card/50">Salary & Skills View</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Key Findings */}
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div className="space-y-6">
+                        <h3 className="text-2xl font-bold flex items-center gap-2">
+                          <Activity className="w-6 h-6 text-primary" /> Key Findings
+                        </h3>
+                        <ul className="space-y-4">
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Salary Benchmarks:</span> <span className="text-primary">AI Engineers & ML Engineers</span> command the highest compensation, significantly outperforming traditional analyst roles.
+                            </div>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Skills in Demand:</span> Top 5 competencies across all roles — <span className="text-primary">Cloud, Deep Learning, ML, Python, SQL</span> — distributed consistently (~20% each), indicating a full-stack data expectation.
+                            </div>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Hiring Urgency:</span> Senior-level roles show the highest salary premiums in high-urgency markets. Mid-to-Senior positions dominate demand.
+                            </div>
+                          </li>
+                          <li className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_5px_rgba(0,212,255,1)]" />
+                            <div>
+                              <span className="font-semibold">Geographic Hotspots:</span> <span className="text-primary">Germany, Canada & Australia</span> show the highest salary-to-opportunity ratios; India offers the highest volume at competitive salaries.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="space-y-6">
+                        <h3 className="text-2xl font-bold flex items-center gap-2">
+                          <Database className="w-6 h-6 text-primary" /> Data Model
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Designed a Star Schema in MySQL with 4 dimension tables (job_description, company_table, date_table, technical_job_required_skills) and a central fact_table linking all entities.
+                        </p>
+                        <div className="rounded-xl overflow-hidden border border-border/50 bg-background/50 p-4">
+                          <img src="/ai_schema.png" alt="AI Job Market Star Schema" className="w-full h-auto rounded mix-blend-screen" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Workflow */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <GitBranch className="w-5 h-5 text-primary" /> Project Workflow
+                      </h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {["1. CSV Cleaning & Standardization", "2. Star Schema Design (MySQL)", "3. SQL Analytical Queries", "4. Power BI Dashboard & DAX"].map((step, i) => (
+                          <div key={i} className="bg-card rounded-lg p-3 border border-border/50 text-sm text-muted-foreground">
+                            {step}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* SQL Analysis */}
+                    <div className="space-y-6 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Terminal className="w-5 h-5 text-primary" /> SQL Analyses Performed
+                      </h3>
+                      <div className="flex flex-wrap gap-3">
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Job Count by Remote Type</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Required Skills by Job Title</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Salary by Education Level</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Salary by Company Size</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Opportunities by Country</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Year-over-Year Trends</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Salary by Hiring Urgency</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
             </div>
           </div>
         </section>
