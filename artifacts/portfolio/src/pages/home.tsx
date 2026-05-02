@@ -56,7 +56,7 @@ export default function Home() {
               Translating <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 drop-shadow-[0_0_10px_rgba(0,212,255,0.4)]">complexity</span> into clarity.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
-              I bridge clinical knowledge with data-driven thinking to transform raw data into actionable healthcare insights.
+              I transform raw data into actionable insights across healthcare, retail, and technology — turning complex datasets from any domain into clear, strategic decisions.
             </p>
             <div className="flex flex-wrap gap-4 justify-center animate-in fade-in slide-in-from-bottom-10 duration-700 delay-300">
               <Button size="lg" asChild className="rounded-full shadow-[0_0_15px_rgba(0,212,255,0.3)] hover:shadow-[0_0_25px_rgba(0,212,255,0.6)] transition-all group">
