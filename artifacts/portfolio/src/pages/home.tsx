@@ -248,6 +248,20 @@ export default function Home() {
                       </div>
                     </div>
 
+                    {/* Workflow */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <GitBranch className="w-5 h-5 text-primary" /> Project Workflow
+                      </h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {["1. Data Collection & Cleaning", "2. Star Schema Design (MySQL)", "3. SQL Analytical Queries", "4. Power BI Dashboard & DAX"].map((step, i) => (
+                          <div key={i} className="bg-card rounded-lg p-3 border border-border/50 text-sm text-muted-foreground">
+                            {step}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
                     {/* SQL Analysis */}
                     <div className="space-y-6 bg-background/30 p-6 rounded-xl border border-border/30">
                       <h3 className="text-xl font-bold flex items-center gap-2">
@@ -409,6 +423,20 @@ export default function Home() {
                         <div className="rounded-xl overflow-hidden border border-border/50 bg-background/50 p-4">
                           <img src="/retail_schema.png" alt="Retail Star Schema" className="w-full h-auto rounded mix-blend-screen" />
                         </div>
+                      </div>
+                    </div>
+
+                    {/* Workflow */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <GitBranch className="w-5 h-5 text-primary" /> Project Workflow
+                      </h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {["1. Raw Data Import & Cleaning", "2. Star Schema Design (MySQL)", "3. SQL Analytical Queries", "4. Power BI Dashboard & DAX"].map((step, i) => (
+                          <div key={i} className="bg-card rounded-lg p-3 border border-border/50 text-sm text-muted-foreground">
+                            {step}
+                          </div>
+                        ))}
                       </div>
                     </div>
 
