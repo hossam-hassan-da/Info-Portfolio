@@ -690,12 +690,8 @@ export default function Home() {
                     <CardHeader>
                       <CardTitle className="text-xl">Bachelor of Pharmacy</CardTitle>
                       <CardDescription className="text-primary font-medium">Sohag University</CardDescription>
+                      <p className="text-sm text-muted-foreground pt-1">Graduated 2024</p>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground text-sm">
-                        Strong foundation in clinical sciences, analytical thinking, and research methodology — providing deep domain expertise that informs healthcare data analysis.
-                      </p>
-                    </CardContent>
                   </Card>
 
                   <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-colors">
