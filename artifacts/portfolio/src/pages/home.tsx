@@ -87,7 +87,6 @@ export default function Home() {
               {[
                 { name: "SQL (MySQL)", icon: Database },
                 { name: "Power BI", icon: BarChart3 },
-                { name: "Python", icon: Terminal },
                 { name: "Excel", icon: Table },
                 { name: "Data Modeling", icon: GitBranch },
                 { name: "Statistical Analysis", icon: LineChart },
