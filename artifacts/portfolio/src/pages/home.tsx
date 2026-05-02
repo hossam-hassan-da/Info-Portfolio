@@ -661,21 +661,37 @@ export default function Home() {
                 <h2 className="text-2xl font-bold tracking-tight mb-8 flex items-center gap-3">
                   <Activity className="text-primary w-6 h-6" /> Experience
                 </h2>
-                <div className="space-y-8 relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-primary/20 before:to-transparent hidden-before-mobile">
-                  
-                  {/* Timeline Item 1 */}
-                  <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                    <div className="flex items-center justify-center w-5 h-5 rounded-full border-2 border-primary bg-background shadow-[0_0_10px_rgba(0,212,255,0.8)] absolute left-0 md:left-1/2 -translate-x-1/2"></div>
-                    <div className="w-[calc(100%-2rem)] md:w-[calc(50%-2rem)] pl-4 md:pl-0 md:pr-8 text-left md:text-right">
-                      <div className="p-5 rounded-xl border border-border/50 bg-card hover:border-primary/50 transition-colors shadow-sm">
-                        <span className="text-primary text-xs font-bold tracking-wider uppercase mb-1 block">Current</span>
-                        <h3 className="font-bold text-lg">Data Analyst</h3>
-                        <p className="text-sm text-muted-foreground mt-2">Transforming complex datasets into actionable insights using SQL, Power BI, and Python to drive strategic decisions.</p>
+                <div className="space-y-6">
+
+                  {/* Freelance */}
+                  <div className="relative pl-5 border-l-2 border-primary/40">
+                    <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-2 border-primary bg-background shadow-[0_0_8px_rgba(0,212,255,0.7)]"></div>
+                    <div className="p-5 rounded-xl border border-border/50 bg-card hover:border-primary/50 transition-colors shadow-sm">
+                      <div className="flex items-center justify-between mb-1 flex-wrap gap-2">
+                        <span className="text-primary text-xs font-bold tracking-wider uppercase">Present</span>
                       </div>
+                      <h3 className="font-bold text-lg">Freelance Data Analyst</h3>
+                      <p className="text-xs text-muted-foreground mb-3 font-medium">Independent · Remote</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Deliver end-to-end data analytics solutions for clients across healthcare, retail, and technology sectors. Responsibilities include requirements gathering, data modeling, SQL-based extraction and transformation, and building interactive Power BI dashboards that drive measurable business decisions.
+                      </p>
                     </div>
                   </div>
 
-                  {/* Add more timeline items if needed */}
+                  {/* ALX Academy */}
+                  <div className="relative pl-5 border-l-2 border-border/40">
+                    <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-2 border-border/60 bg-background"></div>
+                    <div className="p-5 rounded-xl border border-border/50 bg-card hover:border-primary/50 transition-colors shadow-sm">
+                      <div className="flex items-center justify-between mb-1 flex-wrap gap-2">
+                        <span className="text-muted-foreground text-xs font-semibold tracking-wider uppercase">6 Months · Completed</span>
+                      </div>
+                      <h3 className="font-bold text-lg">Data Analytics Trainee</h3>
+                      <p className="text-xs text-muted-foreground mb-3 font-medium">ALX Academy · Cairo, Egypt</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        Completed an intensive 6-month professional development program focused on Data Analytics for the Digital Age. Executed hands-on, end-to-end projects encompassing data collection, cleaning and transformation with SQL, exploratory data analysis, and business intelligence visualization using Power BI — building a production-ready analytical skill set.
+                      </p>
+                    </div>
+                  </div>
 
                 </div>
               </div>
