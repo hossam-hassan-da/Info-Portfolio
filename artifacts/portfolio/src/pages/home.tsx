@@ -686,15 +686,34 @@ export default function Home() {
                   <Code2 className="text-primary w-6 h-6" /> Education
                 </h2>
                 <div className="space-y-6">
-                  <Card className="bg-card/50 border-border/50">
+                  <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-colors">
                     <CardHeader>
-                      <CardTitle className="text-xl">Clinical Background</CardTitle>
-                      <CardDescription className="text-primary">Bridging Healthcare & Data</CardDescription>
+                      <CardTitle className="text-xl">Bachelor of Pharmacy</CardTitle>
+                      <CardDescription className="text-primary font-medium">Sohag University</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground text-sm">
-                        Leveraging domain expertise in healthcare to build highly contextualized data models and analytical solutions that address real clinical needs.
+                        Strong foundation in clinical sciences, analytical thinking, and research methodology — providing deep domain expertise that informs healthcare data analysis.
                       </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-colors">
+                    <CardHeader>
+                      <CardTitle className="text-xl">Professional Certificate in Data Analytics</CardTitle>
+                      <CardDescription className="text-primary font-medium">ALX Academy</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground text-sm mb-4">
+                        Intensive industry-aligned program covering end-to-end data analytics with hands-on projects and real-world applications.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {["SQL", "Power BI", "Excel", "Statistics", "Data Storytelling", "Agile Methodologies"].map((skill) => (
+                          <span key={skill} className="text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
