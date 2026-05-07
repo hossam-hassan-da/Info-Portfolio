@@ -11,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function Home() {
   const { toast } = useToast();
+  const base = import.meta.env.BASE_URL;
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -121,7 +122,7 @@ export default function Home() {
                       <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
                         <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity"></div>
                         <img 
-                          src="/healthcare_dashboard.png" 
+                          src={`${base}healthcare_dashboard.png`} 
                           alt="Healthcare Dashboard Preview" 
                           className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-700"
                         />
@@ -201,7 +202,7 @@ export default function Home() {
                         <BarChart3 className="w-6 h-6 text-primary" /> Dashboard Implementation
                       </h3>
                       <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                        <img src="/healthcare_dashboard.png" alt="Power BI Dashboard" className="w-full h-auto" />
+                        <img src={`${base}healthcare_dashboard.png`} alt="Power BI Dashboard" className="w-full h-auto" />
                       </div>
                       <p className="text-sm text-muted-foreground text-center mt-2">Interactive Power BI Dashboard showcasing high-level KPIs and drill-down capabilities.</p>
                     </div>
@@ -242,7 +243,7 @@ export default function Home() {
                           Engineered a robust Star Schema optimized for analytical queries, consisting of 1 Fact table and 4 Dimension tables.
                         </p>
                         <div className="rounded-xl overflow-hidden border border-border/50 bg-background/50 p-4">
-                          <img src="/healthcare_schema.png" alt="Data Schema" className="w-full h-auto rounded mix-blend-screen" />
+                          <img src={`${base}healthcare_schema.png`} alt="Data Schema" className="w-full h-auto rounded mix-blend-screen" />
                         </div>
                       </div>
                     </div>
@@ -287,7 +288,7 @@ export default function Home() {
                       <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
                         <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity"></div>
                         <img
-                          src="/retail_dashboard.png"
+                          src={`${base}retail_dashboard.png`}
                           alt="Retail Sales Dashboard Preview"
                           className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-700"
                         />
@@ -373,7 +374,7 @@ export default function Home() {
                         <BarChart3 className="w-6 h-6 text-primary" /> Dashboard Implementation
                       </h3>
                       <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                        <img src="/retail_dashboard.png" alt="Retail Sales Power BI Dashboard" className="w-full h-auto" />
+                        <img src={`${base}retail_dashboard.png`} alt="Retail Sales Power BI Dashboard" className="w-full h-auto" />
                       </div>
                       <p className="text-sm text-muted-foreground text-center mt-2">Interactive Power BI Dashboard with gender slicer, category breakdown, temporal trends, and demographic analysis.</p>
                     </div>
@@ -420,7 +421,7 @@ export default function Home() {
                           Built a Star Schema with 3 dimension tables (product, customer, date/time) feeding a central fact_sales_table for optimized analytical queries.
                         </p>
                         <div className="rounded-xl overflow-hidden border border-border/50 bg-background/50 p-4">
-                          <img src="/retail_schema.png" alt="Retail Star Schema" className="w-full h-auto rounded mix-blend-screen" />
+                          <img src={`${base}retail_schema.png`} alt="Retail Star Schema" className="w-full h-auto rounded mix-blend-screen" />
                         </div>
                       </div>
                     </div>
@@ -467,7 +468,7 @@ export default function Home() {
                       <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
                         <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity"></div>
                         <img
-                          src="/ai_dashboard_country.png"
+                          src={`${base}ai_dashboard_country.png`}
                           alt="AI Job Market Dashboard Preview"
                           className="w-full h-full object-cover object-left-top group-hover:scale-105 transition-transform duration-700"
                         />
@@ -556,11 +557,11 @@ export default function Home() {
                       </h3>
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
-                          <img src="/ai_dashboard_country.png" alt="Country View" className="w-full h-auto" />
+                          <img src={`${base}ai_dashboard_country.png`} alt="Country View" className="w-full h-auto" />
                           <p className="text-xs text-muted-foreground text-center py-2 bg-card/50">Country & Industry View</p>
                         </div>
                         <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
-                          <img src="/ai_dashboard_jobs.png" alt="Jobs & Skills View" className="w-full h-auto" />
+                          <img src={`${base}ai_dashboard_jobs.png`} alt="Jobs & Skills View" className="w-full h-auto" />
                           <p className="text-xs text-muted-foreground text-center py-2 bg-card/50">Salary & Skills View</p>
                         </div>
                       </div>
@@ -608,7 +609,7 @@ export default function Home() {
                           Designed a Star Schema in MySQL with 4 dimension tables (job_description, company_table, date_table, technical_job_required_skills) and a central fact_table linking all entities.
                         </p>
                         <div className="rounded-xl overflow-hidden border border-border/50 bg-background/50 p-4">
-                          <img src="/ai_schema.png" alt="AI Job Market Star Schema" className="w-full h-auto rounded mix-blend-screen" />
+                          <img src={`${base}ai_schema.png`} alt="AI Job Market Star Schema" className="w-full h-auto rounded mix-blend-screen" />
                         </div>
                       </div>
                     </div>
