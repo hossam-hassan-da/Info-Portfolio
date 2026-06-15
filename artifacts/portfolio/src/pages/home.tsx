@@ -777,9 +777,9 @@ export default function Home() {
                 <Linkedin className="w-5 h-5" />
                 <span className="text-sm font-medium">LinkedIn</span>
               </a>
-              <a href="mailto:elhoss159@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors px-4 py-2 rounded-full hover:bg-primary/10 border border-border/40 hover:border-primary/40">
+              <a href="mailto:hossamhassann244@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors px-4 py-2 rounded-full hover:bg-primary/10 border border-border/40 hover:border-primary/40">
                 <Mail className="w-5 h-5" />
-                <span className="text-sm font-medium">elhoss159@gmail.com</span>
+                <span className="text-sm font-medium">hossamhassann244@gmail.com</span>
               </a>
               <a href="tel:+201147699721" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors px-4 py-2 rounded-full hover:bg-primary/10 border border-border/40 hover:border-primary/40">
                 <Phone className="w-5 h-5" />
