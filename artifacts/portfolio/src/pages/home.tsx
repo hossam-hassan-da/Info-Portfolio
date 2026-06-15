@@ -647,6 +647,167 @@ export default function Home() {
                 </DialogContent>
               </Dialog>
 
+              {/* Project 4 */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Card className="overflow-hidden border-border/50 hover:border-primary/50 transition-all cursor-pointer group bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-[0_0_30px_rgba(0,212,255,0.1)] mt-6">
+                    <div className="md:flex h-full">
+                      <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
+                        <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity"></div>
+                        <img
+                          src={`${base}pharmacy_schema.png`}
+                          alt="Pharmacy Sales Data Warehouse Schema"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                        />
+                      </div>
+                      <div className="md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">MySQL</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">SQL</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">Excel</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">Star Schema</Badge>
+                          </div>
+                          <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Pharmacy Sales Data Warehouse</h3>
+                          <p className="text-muted-foreground mb-6 line-clamp-3">
+                            End-to-end data warehouse solution transforming 5 months of raw pharmacy transactional data into a normalized MySQL Star Schema — covering data cleaning, ETL, DDL design, and referential integrity for analytical querying.
+                          </p>
+                        </div>
+                        <div className="flex items-center text-primary font-medium text-sm">
+                          View Case Study <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-card border-border/50">
+                  <DialogHeader className="pb-4 border-b border-border/30">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <Badge className="bg-primary/10 text-primary border-primary/20">MySQL</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">SQL</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">Excel</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">Star Schema</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">ETL</Badge>
+                    </div>
+                    <DialogTitle className="text-2xl font-bold">Pharmacy Sales Data Warehouse</DialogTitle>
+                    <DialogDescription className="text-base text-muted-foreground">
+                      A structured data warehouse solution transforming 5 months of raw transactional pharmacy data into a normalized, query-optimized MySQL database using a Star Schema design — with full ETL documentation and referential integrity.
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  <div className="space-y-8 pt-6">
+                    {/* KPI Cards */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {[
+                        { label: "Monthly Tables", value: "5", sub: "Dimension Tables" },
+                        { label: "Transactions", value: "~5K", sub: "Records Linked" },
+                        { label: "Columns / Table", value: "9", sub: "Fields per Month" },
+                        { label: "Data Months", value: "Jan–May", sub: "Coverage" },
+                      ].map((kpi) => (
+                        <div key={kpi.label} className="bg-background/50 rounded-xl p-4 border border-border/50 text-center">
+                          <div className="text-2xl font-bold text-primary">{kpi.value}</div>
+                          <div className="text-xs font-semibold mt-1">{kpi.label}</div>
+                          <div className="text-xs text-muted-foreground">{kpi.sub}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Star Schema */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Database className="w-5 h-5 text-primary" /> Star Schema Design
+                      </h3>
+                      <p className="text-muted-foreground text-sm">
+                        Designed a Star Schema with 5 monthly dimension tables (january_sales → may_sales) feeding a central fact_sales_table linked by foreign keys — enabling fast aggregations and month-over-month trend analysis.
+                      </p>
+                      <div className="rounded-xl overflow-hidden border border-border/50 bg-background/50 p-4">
+                        <img src={`${base}pharmacy_schema.png`} alt="Pharmacy Star Schema" className="w-full h-auto rounded" />
+                      </div>
+                    </div>
+
+                    {/* Data Cleaning */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Activity className="w-5 h-5 text-primary" /> Data Cleaning Process (Excel)
+                      </h3>
+                      <div className="grid md:grid-cols-2 gap-3">
+                        {[
+                          { step: "Missing Values", desc: "Filled blank transaction numbers, replaced empty numerics with 0, added 'No notes' for empty notes fields" },
+                          { step: "Date Standardization", desc: "Converted all dates to YYYY-MM-DD using Excel TEXT() function across all 5 months" },
+                          { step: "Time Standardization", desc: "Normalized time entries to HH:MM:SS format using Excel TEXT() function" },
+                          { step: "Duplicate Removal", desc: "Used Excel Remove Duplicates on transaction_number as the unique key column" },
+                          { step: "Discount Validation", desc: "Recalculated discount values: Discount = Transaction Price × (Discount % / 100)" },
+                          { step: "Data Type Consistency", desc: "All price columns formatted as Number (2 decimal places), text columns validated for consistency" },
+                        ].map((item) => (
+                          <div key={item.step} className="bg-card rounded-lg p-3 border border-border/50">
+                            <div className="text-sm font-semibold text-primary mb-1">{item.step}</div>
+                            <div className="text-xs text-muted-foreground">{item.desc}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* SQL Screenshots */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Terminal className="w-5 h-5 text-primary" /> SQL Implementation
+                      </h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="rounded-xl overflow-hidden border border-border/50 shadow-md">
+                          <img src={`${base}pharmacy_january_table.png`} alt="Creating January Sales Table" className="w-full h-auto" />
+                          <p className="text-xs text-muted-foreground text-center py-2 bg-card/50">Monthly Dimension Table DDL</p>
+                        </div>
+                        <div className="rounded-xl overflow-hidden border border-border/50 shadow-md">
+                          <img src={`${base}pharmacy_fact_table.png`} alt="Creating Fact Sales Table" className="w-full h-auto" />
+                          <p className="text-xs text-muted-foreground text-center py-2 bg-card/50">Central Fact Table with Foreign Keys</p>
+                        </div>
+                        <div className="rounded-xl overflow-hidden border border-border/50 shadow-md md:col-span-2">
+                          <img src={`${base}pharmacy_insert_sql.png`} alt="Recursive CTE Insert" className="w-full h-auto" />
+                          <p className="text-xs text-muted-foreground text-center py-2 bg-card/50">Recursive CTE for Bulk Data Insertion (5000 rows)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Workflow */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <GitBranch className="w-5 h-5 text-primary" /> Project Workflow
+                      </h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {["1. Excel Data Cleaning & Validation", "2. Star Schema Design (MySQL)", "3. DDL Scripts & Foreign Keys", "4. Recursive CTE Data Loading"].map((step, i) => (
+                          <div key={i} className="bg-card rounded-lg p-3 border border-border/50 text-sm text-muted-foreground">
+                            {step}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* SQL Analyses */}
+                    <div className="space-y-6 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Terminal className="w-5 h-5 text-primary" /> SQL Techniques Used
+                      </h3>
+                      <div className="flex flex-wrap gap-3">
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">DDL Table Creation</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Foreign Key Constraints</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Recursive CTE (WITH RECURSIVE)</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Bulk INSERT via CTE</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">AUTO_INCREMENT Primary Keys</Badge>
+                        <Badge variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">Referential Integrity Design</Badge>
+                      </div>
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex flex-wrap gap-4 pt-2">
+                      <a href="https://github.com/hossam-hassan-da/hossam-hassan-da" target="_blank" rel="noreferrer"
+                        className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/50 hover:border-primary/50 text-sm font-medium hover:text-primary transition-colors bg-card">
+                        <Github className="w-4 h-4" /> View on GitHub
+                      </a>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
             </div>
           </div>
         </section>
