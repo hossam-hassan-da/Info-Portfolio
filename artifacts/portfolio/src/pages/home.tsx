@@ -799,7 +799,7 @@ export default function Home() {
 
                     {/* Links */}
                     <div className="flex flex-wrap gap-4 pt-2">
-                      <a href="https://github.com/hossam-hassan-da/hossam-hassan-da" target="_blank" rel="noreferrer"
+                      <a href="https://github.com/hossam-hassan-da/pharmacy-sales-data-warehouse" target="_blank" rel="noreferrer"
                         className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/50 hover:border-primary/50 text-sm font-medium hover:text-primary transition-colors bg-card">
                         <Github className="w-4 h-4" /> View on GitHub
                       </a>
