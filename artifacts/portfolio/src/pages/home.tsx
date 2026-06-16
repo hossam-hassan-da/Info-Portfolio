@@ -672,6 +672,11 @@ export default function Home() {
                           <p className="text-muted-foreground mb-6 line-clamp-3">
                             End-to-end data warehouse solution transforming 5 months of raw pharmacy transactional data into a normalized MySQL Star Schema — covering data cleaning, ETL, DDL design, and referential integrity for analytical querying.
                           </p>
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            <img src="https://img.shields.io/github/stars/hossam-hassan-da/pharmacy-sales-data-warehouse?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="GitHub Stars" className="h-5" />
+                            <img src="https://img.shields.io/github/forks/hossam-hassan-da/pharmacy-sales-data-warehouse?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="GitHub Forks" className="h-5" />
+                            <img src="https://img.shields.io/badge/Status-Complete-00d4ff?style=flat&labelColor=0d1b2a" alt="Status" className="h-5" />
+                          </div>
                         </div>
                         <div className="flex items-center text-primary font-medium text-sm">
                           View Case Study <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -798,11 +803,19 @@ export default function Home() {
                     </div>
 
                     {/* Links */}
-                    <div className="flex flex-wrap gap-4 pt-2">
-                      <a href="https://github.com/hossam-hassan-da/pharmacy-sales-data-warehouse" target="_blank" rel="noreferrer"
-                        className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/50 hover:border-primary/50 text-sm font-medium hover:text-primary transition-colors bg-card">
-                        <Github className="w-4 h-4" /> View on GitHub
-                      </a>
+                    <div className="space-y-4 pt-2">
+                      <div className="flex flex-wrap gap-2">
+                        <img src="https://img.shields.io/github/stars/hossam-hassan-da/pharmacy-sales-data-warehouse?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="GitHub Stars" className="h-5" />
+                        <img src="https://img.shields.io/github/forks/hossam-hassan-da/pharmacy-sales-data-warehouse?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="GitHub Forks" className="h-5" />
+                        <img src="https://img.shields.io/github/last-commit/hossam-hassan-da/pharmacy-sales-data-warehouse?style=flat&color=00d4ff&labelColor=0d1b2a" alt="Last Commit" className="h-5" />
+                        <img src="https://img.shields.io/badge/Status-Complete-00d4ff?style=flat&labelColor=0d1b2a" alt="Status" className="h-5" />
+                      </div>
+                      <div className="flex flex-wrap gap-4">
+                        <a href="https://github.com/hossam-hassan-da/pharmacy-sales-data-warehouse" target="_blank" rel="noreferrer"
+                          className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/50 hover:border-primary/50 text-sm font-medium hover:text-primary transition-colors bg-card">
+                          <Github className="w-4 h-4" /> View on GitHub
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </DialogContent>
