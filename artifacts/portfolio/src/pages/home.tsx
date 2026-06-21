@@ -910,7 +910,7 @@ export default function Home() {
                         {[
                           { group: "Drug A", verdict: "REJECT ❌", color: "text-red-400", findings: ["Systolic control: 78.5% (= Placebo)", "Highest adverse events: 1.12/patient", "Zero improvement over placebo", "High risk, no benefit"] },
                           { group: "Drug B", verdict: "REJECT ❌", color: "text-red-400", findings: ["Systolic control: 79.4% (+0.9% vs Placebo)", "Lowest adverse events: 0.95", "Highest dropout rate: 18.4%", "Statistically insignificant benefit"] },
-                          { group: "Placebo", verdict: "BASELINE ✅", color: "text-primary", findings: ["Systolic control: 78.5%", "Adverse events: 1.07/patient", "Dropout rate: 15.4%", "Best risk-benefit ratio"] },
+                          { group: "Placebo", verdict: "BASELINE", color: "text-primary", findings: ["Systolic control: 78.5%", "Adverse events: 1.07/patient", "Dropout rate: 15.4%", "Best risk-benefit ratio"] },
                         ].map((item) => (
                           <div key={item.group} className="bg-card rounded-xl p-4 border border-border/50">
                             <div className="font-bold text-lg mb-1">{item.group}</div>
@@ -957,10 +957,16 @@ export default function Home() {
                         <img src="https://img.shields.io/badge/Patients-1%2C000-00d4ff?style=flat&labelColor=0d1b2a" alt="Patients" className="h-5" />
                       </div>
                       <div className="flex flex-wrap gap-4">
-                        <a href="https://github.com/hossam-hassan-da/clinical-trials-drug-efficacy-analysis" target="_blank" rel="noreferrer"
-                          className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/50 hover:border-primary/50 text-sm font-medium hover:text-primary transition-colors bg-card">
-                          <Github className="w-4 h-4" /> View on GitHub
-                        </a>
+                        <Button asChild className="rounded-full shadow-[0_0_10px_rgba(0,212,255,0.3)]">
+                          <a href="#" target="_blank" rel="noreferrer">
+                            <ExternalLink className="mr-2 w-4 h-4" /> Interactive Dashboard
+                          </a>
+                        </Button>
+                        <Button variant="outline" asChild className="rounded-full border-border">
+                          <a href="https://github.com/hossam-hassan-da/clinical-trials-drug-efficacy-analysis" target="_blank" rel="noreferrer">
+                            <Github className="mr-2 w-4 h-4" /> View Repository
+                          </a>
+                        </Button>
                       </div>
                     </div>
                   </div>
