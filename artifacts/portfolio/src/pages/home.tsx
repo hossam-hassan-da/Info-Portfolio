@@ -899,6 +899,18 @@ export default function Home() {
                       <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
                         <img src={`${base}clinical_trials_dashboard.png`} alt="Clinical Trials Power BI Dashboard" className="w-full h-auto" />
                       </div>
+                      <div className="flex flex-wrap gap-4 pt-2">
+                        <Button asChild className="rounded-full shadow-[0_0_10px_rgba(0,212,255,0.3)]">
+                          <a href="https://app.powerbi.com/links/ROQA7wezia?ctid=5bf578da-db20-4df2-b8d2-c2357607e377&pbi_source=linkShare" target="_blank" rel="noreferrer">
+                            <ExternalLink className="mr-2 w-4 h-4" /> Interactive Dashboard
+                          </a>
+                        </Button>
+                        <Button variant="outline" asChild className="rounded-full border-border">
+                          <a href="https://github.com/hossam-hassan-da/clinical-trials-drug-efficacy-analysis" target="_blank" rel="noreferrer">
+                            <Github className="mr-2 w-4 h-4" /> View Repository
+                          </a>
+                        </Button>
+                      </div>
                     </div>
 
                     {/* Key Findings */}
@@ -949,25 +961,11 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Links */}
-                    <div className="space-y-4 pt-2">
-                      <div className="flex flex-wrap gap-2">
-                        <img src="https://img.shields.io/github/stars/hossam-hassan-da/clinical-trials-drug-efficacy-analysis?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="Stars" className="h-5" />
-                        <img src="https://img.shields.io/github/last-commit/hossam-hassan-da/clinical-trials-drug-efficacy-analysis?style=flat&color=00d4ff&labelColor=0d1b2a" alt="Last Commit" className="h-5" />
-                        <img src="https://img.shields.io/badge/Patients-1%2C000-00d4ff?style=flat&labelColor=0d1b2a" alt="Patients" className="h-5" />
-                      </div>
-                      <div className="flex flex-wrap gap-4">
-                        <Button asChild className="rounded-full shadow-[0_0_10px_rgba(0,212,255,0.3)]">
-                          <a href="#" target="_blank" rel="noreferrer">
-                            <ExternalLink className="mr-2 w-4 h-4" /> Interactive Dashboard
-                          </a>
-                        </Button>
-                        <Button variant="outline" asChild className="rounded-full border-border">
-                          <a href="https://github.com/hossam-hassan-da/clinical-trials-drug-efficacy-analysis" target="_blank" rel="noreferrer">
-                            <Github className="mr-2 w-4 h-4" /> View Repository
-                          </a>
-                        </Button>
-                      </div>
+                    {/* Badges */}
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      <img src="https://img.shields.io/github/stars/hossam-hassan-da/clinical-trials-drug-efficacy-analysis?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="Stars" className="h-5" />
+                      <img src="https://img.shields.io/github/last-commit/hossam-hassan-da/clinical-trials-drug-efficacy-analysis?style=flat&color=00d4ff&labelColor=0d1b2a" alt="Last Commit" className="h-5" />
+                      <img src="https://img.shields.io/badge/Patients-1%2C000-00d4ff?style=flat&labelColor=0d1b2a" alt="Patients" className="h-5" />
                     </div>
                   </div>
                 </DialogContent>
