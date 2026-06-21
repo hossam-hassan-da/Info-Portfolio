@@ -821,6 +821,152 @@ export default function Home() {
                 </DialogContent>
               </Dialog>
 
+              {/* Project 5 */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Card className="overflow-hidden border-border/50 hover:border-primary/50 transition-all cursor-pointer group bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-[0_0_30px_rgba(0,212,255,0.1)] mt-6">
+                    <div className="md:flex h-full">
+                      <div className="md:w-2/5 h-64 md:h-auto overflow-hidden relative">
+                        <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity"></div>
+                        <img
+                          src={`${base}clinical_trials_dashboard.png`}
+                          alt="Clinical Trials Dashboard Preview"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                        />
+                      </div>
+                      <div className="md:w-3/5 p-8 flex flex-col justify-between">
+                        <div>
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">SQL</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">Power BI</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">DAX</Badge>
+                            <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">MySQL</Badge>
+                          </div>
+                          <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Clinical Trials Drug Efficacy & Safety Dashboard</h3>
+                          <p className="text-muted-foreground mb-6 line-clamp-3">
+                            Comprehensive analysis of a 1,000-patient clinical trial comparing Drug A, Drug B, and Placebo — revealing both drugs failed to outperform placebo in blood pressure control, with SQL-driven statistical analysis and Power BI executive dashboard.
+                          </p>
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            <img src="https://img.shields.io/github/stars/hossam-hassan-da/clinical-trials-drug-efficacy-analysis?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="GitHub Stars" className="h-5" />
+                            <img src="https://img.shields.io/badge/Patients-1%2C000-00d4ff?style=flat&labelColor=0d1b2a" alt="Patients" className="h-5" />
+                            <img src="https://img.shields.io/badge/Status-Complete-00d4ff?style=flat&labelColor=0d1b2a" alt="Status" className="h-5" />
+                          </div>
+                        </div>
+                        <div className="flex items-center text-primary font-medium text-sm">
+                          View Case Study <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-card border-border/50">
+                  <DialogHeader className="pb-4 border-b border-border/30">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <Badge className="bg-primary/10 text-primary border-primary/20">SQL</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">Power BI</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">DAX</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">MySQL</Badge>
+                      <Badge className="bg-primary/10 text-primary border-primary/20">Statistical Analysis</Badge>
+                    </div>
+                    <DialogTitle className="text-2xl font-bold">Clinical Trials Drug Efficacy & Safety Dashboard</DialogTitle>
+                    <DialogDescription className="text-base text-muted-foreground">
+                      A comprehensive SQL + Power BI analysis of 1,000 clinical trial patients comparing Drug A, Drug B, and Placebo — uncovering that both drugs failed to demonstrate statistical superiority over placebo in blood pressure control.
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  <div className="space-y-8 pt-6">
+                    {/* KPI Cards */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {[
+                        { label: "Total Patients", value: "1,000", sub: "Clinical Trial" },
+                        { label: "Treatment Groups", value: "3", sub: "Drug A, B, Placebo" },
+                        { label: "SQL Sections", value: "8", sub: "Analysis Modules" },
+                        { label: "Dropout Rate", value: "16.1%", sub: "Avg Across Groups" },
+                      ].map((kpi) => (
+                        <div key={kpi.label} className="bg-background/50 rounded-xl p-4 border border-border/50 text-center">
+                          <div className="text-2xl font-bold text-primary">{kpi.value}</div>
+                          <div className="text-xs font-semibold mt-1">{kpi.label}</div>
+                          <div className="text-xs text-muted-foreground">{kpi.sub}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Dashboard Screenshot */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <BarChart3 className="w-5 h-5 text-primary" /> Power BI Dashboard
+                      </h3>
+                      <div className="rounded-xl overflow-hidden border border-border/50 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
+                        <img src={`${base}clinical_trials_dashboard.png`} alt="Clinical Trials Power BI Dashboard" className="w-full h-auto" />
+                      </div>
+                    </div>
+
+                    {/* Key Findings */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Activity className="w-5 h-5 text-primary" /> Key Findings
+                      </h3>
+                      <div className="grid md:grid-cols-3 gap-4">
+                        {[
+                          { group: "Drug A", verdict: "REJECT ❌", color: "text-red-400", findings: ["Systolic control: 78.5% (= Placebo)", "Highest adverse events: 1.12/patient", "Zero improvement over placebo", "High risk, no benefit"] },
+                          { group: "Drug B", verdict: "REJECT ❌", color: "text-red-400", findings: ["Systolic control: 79.4% (+0.9% vs Placebo)", "Lowest adverse events: 0.95", "Highest dropout rate: 18.4%", "Statistically insignificant benefit"] },
+                          { group: "Placebo", verdict: "BASELINE ✅", color: "text-primary", findings: ["Systolic control: 78.5%", "Adverse events: 1.07/patient", "Dropout rate: 15.4%", "Best risk-benefit ratio"] },
+                        ].map((item) => (
+                          <div key={item.group} className="bg-card rounded-xl p-4 border border-border/50">
+                            <div className="font-bold text-lg mb-1">{item.group}</div>
+                            <div className={`text-sm font-semibold mb-3 ${item.color}`}>{item.verdict}</div>
+                            <ul className="space-y-1">
+                              {item.findings.map((f, i) => (
+                                <li key={i} className="text-xs text-muted-foreground flex gap-1.5"><span className="text-primary mt-0.5">·</span>{f}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Workflow */}
+                    <div className="space-y-4 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <GitBranch className="w-5 h-5 text-primary" /> Project Workflow
+                      </h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {["1. Data Exploration & Validation", "2. SQL Statistical Analysis (8 Sections)", "3. Power BI Dashboard & DAX", "4. Executive Recommendations"].map((step, i) => (
+                          <div key={i} className="bg-card rounded-lg p-3 border border-border/50 text-sm text-muted-foreground">{step}</div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* SQL Analyses */}
+                    <div className="space-y-6 bg-background/30 p-6 rounded-xl border border-border/30">
+                      <h3 className="text-xl font-bold flex items-center gap-2">
+                        <Terminal className="w-5 h-5 text-primary" /> SQL Analyses Performed
+                      </h3>
+                      <div className="flex flex-wrap gap-3">
+                        {["Data Exploration & NULL Check", "Demographics by Treatment Group", "Adverse Events Summary", "Dropout Rate Analysis", "Systolic BP Control Rate", "Diastolic BP Control Rate", "Drug vs Placebo Efficacy Gap", "Risk-Benefit Ratio Analysis", "Subgroup Analysis (Age & Gender)", "High-Risk Patient Identification", "Executive Summary Query"].map((a) => (
+                          <Badge key={a} variant="secondary" className="bg-card hover:bg-card border-border/50 text-foreground py-1.5 px-3">{a}</Badge>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Links */}
+                    <div className="space-y-4 pt-2">
+                      <div className="flex flex-wrap gap-2">
+                        <img src="https://img.shields.io/github/stars/hossam-hassan-da/clinical-trials-drug-efficacy-analysis?style=flat&logo=github&color=00d4ff&labelColor=0d1b2a&logoColor=00d4ff" alt="Stars" className="h-5" />
+                        <img src="https://img.shields.io/github/last-commit/hossam-hassan-da/clinical-trials-drug-efficacy-analysis?style=flat&color=00d4ff&labelColor=0d1b2a" alt="Last Commit" className="h-5" />
+                        <img src="https://img.shields.io/badge/Patients-1%2C000-00d4ff?style=flat&labelColor=0d1b2a" alt="Patients" className="h-5" />
+                      </div>
+                      <div className="flex flex-wrap gap-4">
+                        <a href="https://github.com/hossam-hassan-da/clinical-trials-drug-efficacy-analysis" target="_blank" rel="noreferrer"
+                          className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border/50 hover:border-primary/50 text-sm font-medium hover:text-primary transition-colors bg-card">
+                          <Github className="w-4 h-4" /> View on GitHub
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
             </div>
           </div>
         </section>
